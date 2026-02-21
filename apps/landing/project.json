@@ -53,7 +53,8 @@
           "buildTarget": "landing:build:production"
         },
         "development": {
-          "buildTarget": "landing:build:development"
+          "buildTarget": "landing:build:development",
+          "port": 4400
         }
       },
       "defaultConfiguration": "development"

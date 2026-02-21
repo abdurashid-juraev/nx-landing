@@ -53,7 +53,8 @@
           "buildTarget": "student:build:production"
         },
         "development": {
-          "buildTarget": "student:build:development"
+          "buildTarget": "student:build:development",
+          "port": 4500
         }
       },
       "defaultConfiguration": "development"

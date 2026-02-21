@@ -53,7 +53,8 @@
           "buildTarget": "admin:build:production"
         },
         "development": {
-          "buildTarget": "admin:build:development"
+          "buildTarget": "admin:build:development",
+          "port": 4600
         }
       },
       "defaultConfiguration": "development"
