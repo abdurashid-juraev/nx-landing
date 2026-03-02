@@ -2,6 +2,7 @@
 
 @source "../../../../apps";
 @source "../../../../libs";
+@import 'primeicons/primeicons.css';
 
 /* Umumiy dizayn tizimi (Theme) ni shu yerda yarating */
 /*@theme {

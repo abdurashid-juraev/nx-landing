@@ -21,7 +21,6 @@
         ],
         "styles": [
           "libs/shared/ui/src/style.css",
-          "primeicons/primeicons.css",
           "apps/student/src/styles.css"
         ]
       },

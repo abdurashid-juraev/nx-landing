@@ -14,6 +14,13 @@ export const appConfig: ApplicationConfig = {
       ripple: true,
       theme: {
         preset: Aura,
+        options: {
+          darkModeSelector: '.app-dark',
+          cssLayer: {
+            name: 'primeng',
+            order: 'theme, base, primeng, utilities',
+          },
+        },
       },
     }),
   ],
