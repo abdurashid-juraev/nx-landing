@@ -1,1 +1,3 @@
-/* Agar faqat shu (masalan, student) ilovaga xos maxsus stillar kerak bo'lsa, shu yerda yoziladi */
+@import "../../../libs/shared/ui-theme/src/lib/theme.css";
+
+/* Faqat shu student loyihasi uchun kerak bo'lsa, maxsus css larni shu yerda yozasiz */

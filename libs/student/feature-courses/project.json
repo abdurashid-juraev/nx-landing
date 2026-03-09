@@ -1,0 +1,13 @@
+{
+  "name": "feature-courses",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/student/feature-courses/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:student", "type:feature"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

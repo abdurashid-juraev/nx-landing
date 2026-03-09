@@ -1,0 +1,13 @@
+{
+  "name": "data-access-enrollment",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/student/data-access-enrollment/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:student", "type:data-access"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

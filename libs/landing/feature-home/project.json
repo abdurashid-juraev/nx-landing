@@ -1,0 +1,13 @@
+{
+  "name": "feature-home",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/landing/feature-home/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:landing", "type:feature"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

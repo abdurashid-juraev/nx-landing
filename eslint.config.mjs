@@ -16,10 +16,17 @@ export default [
           enforceBuildableLibDependency: true,
           allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?[jt]s$'],
           depConstraints: [
-            {
-              sourceTag: '*',
-              onlyDependOnLibsWithTags: ['*'],
-            },
+            // --- 1. SCOPE BOUNDARIES ---
+            { sourceTag: 'scope:admin', onlyDependOnLibsWithTags: ['scope:admin', 'scope:shared'] },
+            { sourceTag: 'scope:landing', onlyDependOnLibsWithTags: ['scope:landing', 'scope:shared'] },
+            { sourceTag: 'scope:student', onlyDependOnLibsWithTags: ['scope:student', 'scope:shared'] },
+            { sourceTag: 'scope:shared', onlyDependOnLibsWithTags: ['scope:shared'] },
+            
+            // --- 2. TYPE BOUNDARIES ---
+            { sourceTag: 'type:feature', onlyDependOnLibsWithTags: ['type:feature', 'type:ui', 'type:data-access', 'type:util'] },
+            { sourceTag: 'type:ui', onlyDependOnLibsWithTags: ['type:ui', 'type:util'] },
+            { sourceTag: 'type:data-access', onlyDependOnLibsWithTags: ['type:data-access', 'type:util'] },
+            { sourceTag: 'type:util', onlyDependOnLibsWithTags: ['type:util'] },
           ],
         },
       ],
