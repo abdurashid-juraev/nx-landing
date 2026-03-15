@@ -15,10 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@org/ui-buttons": ["libs/shared/ui-buttons/src/index.ts"],
       "@org/feature-dashboard": ["libs/admin/feature-dashboard/src/index.ts"],
       "@org/ui-components": ["libs/admin/ui-components/src/index.ts"],
-      "@org/data-access-auth": ["libs/admin/data-access-auth/src/index.ts"],
+      "@org/data-access-auth": ["auth-data/src/index.ts"],
       "@org/feature-home": ["libs/landing/feature-home/src/index.ts"],
       "@org/ui-hero": ["libs/landing/ui-hero/src/index.ts"],
       "@org/feature-courses": ["libs/student/feature-courses/src/index.ts"],

@@ -1,7 +1,7 @@
 {
   "name": "data-access-auth",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/admin/data-access-auth/src",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "auth-data/src",
   "prefix": "lib",
   "projectType": "library",
   "tags": ["scope:admin", "type:data-access"],
