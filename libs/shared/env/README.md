@@ -1,3 +1,3 @@
-# student-ui-theme
+# env
 
 This library was generated with [Nx](https://nx.dev).

@@ -24,9 +24,7 @@
       "@org/data-access-enrollment": ["libs/student/data-access-enrollment/src/index.ts"],
       "@org/util-formatting": ["libs/shared/util-formatting/src/index.ts"],
       "@org/ui-theme": ["libs/shared/ui-theme/src/index.ts"],
-      "@org/admin-theme": ["libs/admin/ui-theme/src/index.ts"],
-      "@org/landing-theme": ["libs/landing/ui-theme/src/index.ts"],
-      "@org/student-theme": ["libs/student/ui-theme/src/index.ts"]
+      "@org/env": ["shared/env/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
