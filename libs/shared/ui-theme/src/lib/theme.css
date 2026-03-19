@@ -1,12 +1,10 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "tailwindcss-primeui";
 
-@source "../../../../../apps"; 
-@source "../../../../../libs"; 
+@source "../../../../../apps";
+@source "../../../../../libs";
 
-/* PrimeNG asosiy (core) va ikonkalari */
-/* PrimeNG 18+ da global css mavjud emas. Kerakli reset'larni tailwind o'zi hal qiladi, yoki primeuix/themes da bo'ladi. Hozir qoldiramiz */
-@import "primeicons/primeicons.css";
+@import 'primeicons/primeicons.css';
 
 /* Yagona Tailwind Theme bu yerdan boshqariladi */
 /* @theme {
