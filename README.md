@@ -24,29 +24,50 @@ These targets are either [inferred automatically](https://nx.dev/concepts/inferr
 
 [More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
-## Add new projects
+## Nx Buyruqlari Shpargalkasi (Uzbek Cheat Sheet)
 
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
+Ushbu loyihada Angular va Nx bilan ishlashda eng ko'p ishlatiladigan buyruqlar va ularning vazifalari.
 
-To install a new plugin you can use the `nx add` command. Here's an example of adding the React plugin:
-
+### 1. Ilovani ishlashga tushirish (Run)
 ```sh
-npx nx add @nx/react
+# Admin ilovasini ishga tushirish (port: 4600)
+npx nx serve admin
+
+# Student ilovasini ishga tushirish
+npx nx serve student
+
+# Loyihalar bog'liqligini grafik ko'rinishida ko'rish
+npx nx graph
 ```
 
-Use the plugin's generator to create new projects. For example, to create a new React app or library:
-
+### 2. Kutubxona (Library) yaratish
+Eng ko'p ishlatiladigan buyruq:
 ```sh
-# Generate an app
-npx nx g @nx/react:app demo
+# Yengil TypeScript kutubxonasi yaratish (Service, Interface, Utils uchun)
+npx nx g @nx/js:lib <lib-nomi> --directory=libs/<path> --tags="scope:<app-nomi>,type:<lib-turi>" --bundler=none --unitTestRunner=none
 
-# Generate a library
-npx nx generate @nx/angular:lib --name=shared-models --directory=libs/shared/models --unitTestRunner=none
+# Angular Component kutubxonasi yaratish (UI uchun)
+npx nx g @nx/angular:lib <lib-nomi> --directory=libs/<path> --tags="scope:<app-nomi>,type:ui"
 ```
 
+**Flaglar bo'yicha izoh:**
+- `--directory`: Kutubxona qaysi papkada yaratilishi (masalan: `libs/shared/env`)
+- `--tags`: Loyihani guruhlash: `scope` (qaysi app ishlatadi) va `type` (vazifasi: `util`, `ui`, `data-access`, `feature`)
+- `--bundler=none`: Kutubxona uchun alohida builder qo'shmaslik (Build vaqtini tejaydi)
+- `--unitTestRunner=none`: Hozircha Unit test fayllarini yaratmaslik
+
+### 3. Kutubxonani ko'chirish yoki o'chirish
 ```sh
-# Generate only file .ts (interface)
-npx nx generate @nx/js:lib --name=shared-models --directory=libs/shared/models
+# Kutubxonani boshqa papkaga ko'chirish (avtomatik importlarni to'g'irlaydi)
+npx nx g @nx/workspace:move --project <eski-nomi> --destination libs/<yangi-yo'l>
+
+# Kutubxonani butkul o'chirish
+npx nx g @nx/workspace:remove --projectName=<lib-nomi>
+```
+
+### 4. Transloco (Ko'p tillik) o'rnatish
+```sh
+npx nx g @jsverse/transloco:ng-add
 ```
 
 You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
