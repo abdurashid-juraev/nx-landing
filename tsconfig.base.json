@@ -20,7 +20,6 @@
       "@org/data-access-auth": ["auth-data/src/index.ts"],
       "@org/feature-home": ["libs/landing/feature-home/src/index.ts"],
       "@org/ui-hero": ["libs/landing/ui-hero/src/index.ts"],
-      "@org/feature-courses": ["libs/student/feature-courses/src/index.ts"],
       "@org/util-formatting": ["libs/shared/util-formatting/src/index.ts"],
       "@org/ui-theme": ["libs/shared/ui-theme/src/index.ts"],
       "@org/env": ["libs/shared/env/src/index.ts"],
@@ -28,7 +27,8 @@
       "@org/notifications": ["libs/shared/notifications/src/index.ts"],
       "@org/i18n": ["libs/shared/i18n/src/index.ts"],
       "@org/data-access": ["libs/shared/data-access/src/index.ts"],
-      "@org/auth": ["libs/shared/auth/src/index.ts"]
+      "@org/auth": ["libs/shared/auth/src/index.ts"],
+      "@org/client-feature-courses": ["libs/client/feature-courses/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

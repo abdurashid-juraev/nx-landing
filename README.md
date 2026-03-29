@@ -34,7 +34,7 @@ Ushbu loyihada Angular va Nx bilan ishlashda eng ko'p ishlatiladigan buyruqlar v
 npx nx serve admin
 
 # Student ilovasini ishga tushirish
-npx nx serve student
+npx nx serve client
 
 # Loyihalar bog'liqligini grafik ko'rinishida ko'rish
 npx nx graph
