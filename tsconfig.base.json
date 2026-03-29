@@ -27,7 +27,8 @@
       "@org/shared-models": ["libs/shared/models/src/index.ts"],
       "@org/notifications": ["libs/shared/notifications/src/index.ts"],
       "@org/i18n": ["libs/shared/i18n/src/index.ts"],
-      "@org/data-access": ["libs/shared/data-access/src/index.ts"]
+      "@org/data-access": ["libs/shared/data-access/src/index.ts"],
+      "@org/auth": ["libs/shared/auth/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,4 +1,4 @@
-# Architectura qurish ketma-ketligi (Roadmap)
+# Architectura qurish ketma-ketlikda quriladi (Roadmap)
 
 Ushbu ro'yxat loyihani professional darajada, bosqichma-bosqich qurish uchun mo'ljallangan.
 
@@ -20,12 +20,12 @@ Ushbu ro'yxat loyihani professional darajada, bosqichma-bosqich qurish uchun mo'
    - Admin ilovasida shared loader-dan foydalanishni sozlash. (Bajarildi)
    - Komponentlarda tarjima ishlashini test qilish. (Bajarildi)
 
-4. Global Error Interceptor & API Data Access (Hozirgi bosqich)
-   - shared/data-access-api (yoki HTTP) kutubxonasini yaratish.
-   - Global Error Interceptor yozish (HttpErrorResponse xatolarini ushlash uchun).
-   - Interceptorni Admin ilovasida ro'yxatdan o'tkazish.
+4. Global Error Interceptor & API Data Access (Bajarildi)
+   - shared/data-access kutubxonasini yaratish. (Bajarildi)
+   - Global Error Interceptor yozish (HttpErrorResponse xatolarini ushlash uchun). (Bajarildi)
+   - Interceptorni Admin ilovasida ro'yxatdan o'tkazish. (Bajarildi)
 
-5. Shared Authentication Logic (Token boshqaruvi)
+5. Shared Authentication Logic (Token boshqaruvi) (Hozirgi bosqich)
    - shared/data-access-auth kutubxonasini yaratish.
    - TokenService (LocalStorage bilan ishlash) yaratish.
    - Auth Interceptor (Bearer token qo'shish) yaratish.

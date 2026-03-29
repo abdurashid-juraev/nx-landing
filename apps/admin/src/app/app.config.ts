@@ -1,3 +1,5 @@
+import { authInterceptor } from '@org/auth';
+import { errorInterceptor } from '@org/data-access';
 import { API_URL } from '@org/env';
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, isDevMode } from '@angular/core';
 import { provideRouter } from '@angular/router';
@@ -5,7 +7,7 @@ import { appRoutes } from './app.routes';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeuix/themes/aura';
 import { MessageService } from 'primeng/api';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideTransloco } from '@jsverse/transloco';
 import { TranslocoHttpLoader } from '@org/i18n';
 export const appConfig: ApplicationConfig = {
@@ -27,7 +29,7 @@ export const appConfig: ApplicationConfig = {
       }
     }),
     MessageService,
-    provideHttpClient(),
+    provideHttpClient(withInterceptors([errorInterceptor, authInterceptor])),
     provideTransloco({
       config: {
         availableLangs: ['en', 'uz', 'ru', 'kar'],
