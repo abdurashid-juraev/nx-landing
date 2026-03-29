@@ -25,13 +25,13 @@ Ushbu ro'yxat loyihani professional darajada, bosqichma-bosqich qurish uchun mo'
    - Global Error Interceptor yozish (HttpErrorResponse xatolarini ushlash uchun). (Bajarildi)
    - Interceptorni Admin ilovasida ro'yxatdan o'tkazish. (Bajarildi)
 
-5. Shared Authentication Logic (Token boshqaruvi) (Hozirgi bosqich)
-   - shared/data-access-auth kutubxonasini yaratish.
-   - TokenService (LocalStorage bilan ishlash) yaratish.
-   - Auth Interceptor (Bearer token qo'shish) yaratish.
-   - Auth Guard (Sahifalarni himoya qilish) yaratish.
+5. Shared Authentication Logic (Token boshqaruvi) (Bajarildi)
+   - shared/auth kutubxonasini yaratish. (Bajarildi)
+   - TokenService (LocalStorage bilan ishlash) yaratish. (Bajarildi)
+   - Auth Interceptor (Bearer token qo'shish) yaratish. (Bajarildi)
+   - Auth Guard (Sahifalarni himoya qilish) yaratish. (Bajarildi)
 
-6. API Integratsiyasi (Admin Auth)
+6. API Integratsiyasi (Admin Auth) (Hozirgi bosqich)
    - admin/auth-data modulida DTO modellarni yaratish.
    - AdminAuthService (Login/Logout API) yaratish.
    - Login muvaffaqiyatli bo'lsa, tokenni saqlash mexanizmini ulash.
