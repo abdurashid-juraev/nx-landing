@@ -1,7 +1,8 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../dist/out-tsc",
+    "ignoreDeprecations": "6.0",
+    "outDir": "../../../dist/out-tsc",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,

@@ -1,10 +1,10 @@
 {
-  "name": "data-access-auth",
+  "name": "feature-auth",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/admin/auth-data/src",
+  "sourceRoot": "libs/admin/feature-auth/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": ["scope:admin", "type:data-access"],
+  "tags": [],
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint"

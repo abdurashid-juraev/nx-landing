@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './feature-dashboard.html',
   styleUrl: './feature-dashboard.css'
 })
-export class FeatureDashboard {}
+export default class FeatureDashboard {}

@@ -12,7 +12,7 @@ import { provideTransloco } from '@jsverse/transloco';
 import { TranslocoHttpLoader } from '@org/i18n';
 export const appConfig: ApplicationConfig = {
   providers: [
-    { provide: API_URL, useValue: 'http://localhost:3000/ap' },
+    { provide: API_URL, useValue: 'http://localhost:3000/api' },
     provideBrowserGlobalErrorListeners(),
     provideRouter(appRoutes),
     providePrimeNG({
