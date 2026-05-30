@@ -5,7 +5,7 @@ export const handlers = [
 
     const body = (await request.json()) as any;
 
-    if (!body.username || body.password.length < 4) {
+    if (body.username !== 'admin' || body.password !== 'adm123') {
       return new HttpResponse(JSON.stringify({ message: 'Username or password ' }), {
         status: 400,
         headers: { 'Content-Type': 'application/json' }
