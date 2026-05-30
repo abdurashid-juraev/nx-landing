@@ -1,4 +1,4 @@
-# Architectura qurish ketma-ketlikda quriladi (Roadmap)
+  # Architectura qurish ketma-ketlikda quriladi (Roadmap)
 
 Ushbu ro'yxat loyihani professional darajada, bosqichma-bosqich qurish uchun mo'ljallangan.
 

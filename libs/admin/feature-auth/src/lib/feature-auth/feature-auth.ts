@@ -35,8 +35,6 @@ export class FeatureAuth {
   });
 
   constructor() {
-    console.log('FeatureAuth komponenti muvaffaqiyatli yuklandi!');
-
     effect(() => {
       if (this.isAuthenicated()) {
         this.router.navigate(['/dashboard']);

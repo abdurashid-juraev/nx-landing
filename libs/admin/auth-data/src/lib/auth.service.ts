@@ -1,3 +1,4 @@
+import { NotificationService } from './../../../../shared/notifications/src/lib/notifications';
 import { TokenService } from '@org/auth';
 import { API_URL } from '@org/env';
 import { HttpClient } from '@angular/common/http';
@@ -14,7 +15,7 @@ export class AuthService {
   readonly currentUser = signal<User | null>(null);
   readonly isLoading = signal<boolean>(false);
   readonly error = signal<string | null>(null);
-
+  private notificationService = inject(NotificationService);
   // Computed signal - foydalanuvchi tizimga kirgan yoki kirmaganini aniqlash uchun
   readonly isAuthenticated = computed(() => this.tokenService.isAuthenticated());
   //=======================================================================
@@ -22,21 +23,17 @@ export class AuthService {
     this.isLoading.set(true);
     this.error.set(null);
 
-    return this.http
-      .post<AuthResponse>(`${this.apiUrl}/auth/login`, credentials)
-      .pipe(
-        tap((response) => {
-          this.currentUser.set(response.user);
-          this.tokenService.setToken(response.token);
-        }),
-        catchError((err) => {
-          this.error.set(err.message || err.message || 'Login failed');
-          return of(null);
-        })
-      )
-      .subscribe(() => {
+    return this.http.post<AuthResponse>(`${this.apiUrl}/auth/login`, credentials).subscribe({
+      next: (res) => {
+        this.currentUser.set(res.user);
+        this.tokenService.setToken(res.token);
         this.isLoading.set(false);
-      });
+        this.notificationService.showSuccess('Login success..!');
+      },
+      error: (err) => {
+        console.error(`${err} - Login failed..!`);
+      }
+    });
   }
 
   logout() {
