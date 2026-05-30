@@ -1,1 +1,90 @@
-<p>FeatureAuth works!</p>
+<div class="login-container flex items-center justify-center min-h-screen bg-slate-900 p-4">
+  <!-- Orqa fondagi yorug'lik effektlari (Ambient Glow) -->
+  <div class="absolute w-96 h-96 bg-primary-500/10 rounded-full blur-3xl -top-20 -left-20"></div>
+  <div class="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -bottom-20 -right-20"></div>
+
+  <!-- Login Karta -->
+  <div
+    class="w-full max-w-md p-8 rounded-2xl bg-slate-800/60 border border-slate-700/50 backdrop-blur-xl shadow-2xl z-10"
+  >
+    <!-- Sarlavha -->
+    <div class="text-center mb-8">
+      <div class="inline-flex p-3 bg-primary-500/10 text-primary-400 rounded-xl mb-4">
+        <i class="pi pi-lock text-3xl"></i>
+      </div>
+      <h2 class="text-2xl font-bold text-white tracking-tight">Tizimga Kirish</h2>
+      <p class="text-slate-400 mt-2 text-sm">
+        Boshqaruv paneliga kirish uchun ma'lumotlaringizni kiriting
+      </p>
+    </div>
+
+    <!-- Global Xatolik Banneri (Signal-based) -->
+    @if (errorMessage()) {
+    <div
+      class="flex items-center gap-3 p-3 mb-6 text-sm text-red-200 bg-red-900/30 border border-red-500/30 rounded-xl animate-fade-in"
+      role="alert"
+    >
+      <i class="pi pi-exclamation-circle text-lg text-red-400"></i>
+      <span>{{ errorMessage() }}</span>
+    </div>
+    }
+
+    <!-- Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-5">
+      <!-- Foydalanuvchi nomi inputi -->
+      <div class="flex flex-col gap-2">
+        <label for="username" class="text-sm font-medium text-slate-300 relative"
+          >Foydalanuvchi nomi</label
+        >
+        <p-iconfield>
+          <p-inputicon class="pi pi-user" />
+          <input
+            pInputText
+            id="username"
+            formControlName="username"
+            placeholder="admin yoki username"
+            class="w-full pl-10 py-3 bg-slate-900/50 border-slate-700 text-white rounded-xl focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
+            [attr.disabled]="isLoading() ? true : null"
+          />
+        </p-iconfield>
+
+        @if (loginForm.get('username')?.touched && loginForm.get('username')?.invalid) {
+        <span class="text-xs text-red-400 flex items-center gap-1 mt-1">
+          <i class="pi pi-times-circle"></i> Foydalanuvchi nomi majburiy!
+        </span>
+        }
+      </div>
+
+      <!-- Parol inputi -->
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center justify-between">
+          <label for="password" class="text-sm font-medium text-slate-300">Parol</label>
+        </div>
+        <p-password
+          id="password"
+          formControlName="password"
+          [feedback]="false"
+          [toggleMask]="true"
+          class="w-full"
+          inputStyleClass="w-full pl-4 py-3 bg-slate-900/50 border-slate-700 text-white rounded-xl focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
+          placeholder="Parolingizni kiriting"
+          [disabled]="isLoading()"
+        ></p-password>
+        @if (loginForm.get('password')?.touched && loginForm.get('password')?.invalid) {
+        <span class="text-xs text-red-400 flex items-center gap-1 mt-1">
+          <i class="pi pi-times-circle"></i> Parol kamida 4 ta belgidan iborat bo'lishi kerak!
+        </span>
+        }
+      </div>
+
+      <!-- Tizimga kirish tugmasi -->
+      <p-button
+        type="submit"
+        label="Tizimga kirish"
+        [loading]="isLoading()"
+        styleClass="w-full py-3 mt-4 bg-primary-500 hover:bg-primary-600 border-none text-white font-semibold rounded-xl transition duration-200"
+        [disabled]="loginForm.invalid || isLoading()"
+      ></p-button>
+    </form>
+  </div>
+</div>

@@ -56,5 +56,10 @@
     "primeng": "^21.1.1",
     "rxjs": "~7.8.0",
     "tailwindcss": "^4.2.1"
+  },
+  "msw": {
+    "workerDirectory": [
+      "apps/admin/public"
+    ]
   }
 }

@@ -31,12 +31,12 @@ Ushbu ro'yxat loyihani professional darajada, bosqichma-bosqich qurish uchun mo'
    - Auth Interceptor (Bearer token qo'shish) yaratish. (Bajarildi)
    - Auth Guard (Sahifalarni himoya qilish) yaratish. (Bajarildi)
 
-6. API Integratsiyasi (Admin Auth) (Hozirgi bosqich)
-   - admin/auth-data modulida DTO modellarni yaratish.
-   - AdminAuthService (Login/Logout API) yaratish.
-   - Login muvaffaqiyatli bo'lsa, tokenni saqlash mexanizmini ulash.
-   - Admin UI (Login sahifasi)ni servisga bog'lash.
+6. API Integratsiyasi (Admin Auth) (Bajarildi)
+   - admin/auth-data modulida DTO modellarni yaratish. (Bajarildi)
+   - AdminAuthService (Login/Logout API) yaratish. (Bajarildi)
+   - Login muvaffaqiyatli bo'lsa, tokenni saqlash mexanizmini ulash. (Bajarildi)
+   - Admin UI (Login sahifasi)ni servisga bog'lash. (Bajarildi)
 
-7. Yakuniy sozlashlar
-   - Barcha ilovalar uchun umumiy Tailwind va PrimeNG mavzularini tekshirish.
+7. Yakuniy sozlashlar (Hozirgi bosqich)
+   - Barcha ilovalar uchun umumiy Tailwind va PrimeNG mavzularini tekshirish. (Hozirgi bosqich)
    - Loyihani test qilish va xatolarni tuzatish.

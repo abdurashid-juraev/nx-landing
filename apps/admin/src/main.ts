@@ -12,7 +12,7 @@ async function prepareApp() {
       onUnhandledRequest: 'bypass',
 
       serviceWorker: {
-        url: 'mockServiceWorker.js'
+        url: '/mockServiceWorker.js'
       }
     });
   }
