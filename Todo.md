@@ -43,17 +43,17 @@ Ushbu ro'yxat loyihani professional darajada, bosqichma-bosqich va eng so'nggi A
 
 ## ⚡ Hozirgi Bosqich (Current Phase 🚀)
 
-- [/] **7. Admin UI (Login sahifasi) & Integration**
+- [x] **7. Admin UI (Login sahifasi) & Integration**
   - [x] `libs/admin/feature-auth` tarkibida premium login interfeysini shakllantirish (`p-password`, `p-iconfield`, `p-button`).
   - [x] Formani `loginForm` validatsiyalari bilan bog'lash va `AuthService.login()` xizmatiga ulash.
-  - [ ] Mahalliy muhitda loyihani ishga tushirib (`npx nx serve admin`), login va avtomatik `/dashboard` yo'naltirishini amalda test qilish.
-  - [ ] Global Tailwind va PrimeNG mavzularini tekshirish.
+  - [x] Mahalliy muhitda loyihani ishga tushirib (`npx nx serve admin`), login va avtomatik `/dashboard` yo'naltirishini amalda test qilish.
+  - [x] Global Tailwind va PrimeNG mavzularini tekshirish.
 
 ---
 
 ## 🎯 Navbatdagi Bosqichlar (Next Steps 🚀)
 
-- [ ] **8. Feature Dashboard: Smart & Dumb Component Architecture**
+- [/] **8. Feature Dashboard: Smart & Dumb Component Architecture**
   - [ ] `libs/admin/feature-dashboard` tarkibida Smart Dashboard sahifasini loyihalash.
   - [ ] Dashboard uchun zarur bo'lgan statistik ma'lumotlar modelini yaratish (`data-access-dashboard`).
   - [ ] Ko'rsatkichlarni (panellar, grafiklar) chizish uchun dumb UI komponentlardan foydalanish yoki integratsiya qilish.

@@ -28,7 +28,8 @@
       "@org/data-access": ["./libs/shared/data-access/src/index.ts"],
       "@org/auth": ["./libs/shared/auth/src/index.ts"],
       "@org/client-feature-courses": ["./libs/client/feature-courses/src/index.ts"],
-      "@org/feature-auth": ["./libs/admin/feature-auth/src/index.ts"]
+      "@org/feature-auth": ["./libs/admin/feature-auth/src/index.ts"],
+      "@org/feature-layout": ["./libs/admin/feature-layout/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

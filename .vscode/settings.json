@@ -1,6 +1,6 @@
 {
   "css.lint.unknownAtRules": "ignore",
   "tailwindCSS.experimental.configFile": null,
-  "editor.fontSize": 18,
+  "editor.fontSize": 16,
   "editor.tabSize": 2
 }
