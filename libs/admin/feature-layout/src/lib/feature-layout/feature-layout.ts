@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { Sidebar } from '../components/sidebar';
+import { Topbar } from '../components/topbar';
 
 @Component({
   selector: 'lib-feature-layout',
-  imports: [],
+  imports: [Sidebar, Topbar],
   templateUrl: './feature-layout.html',
   styleUrl: './feature-layout.css'
 })
