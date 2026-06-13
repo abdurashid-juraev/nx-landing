@@ -1,8 +1,8 @@
-<div class="flex bg-slate-200">
-  <lib-sidebar />
-  <div class="px-5 py-2 w-full">
-    <lib-topbar />
-    <main>
+<div class="flex bg-slate-200 overflow-hidden h-screen">
+  <lib-sidebar class="flex-none" />
+  <div class="py-2 flex w-full flex-col h-full">
+    <lib-topbar class="mb-4" />
+    <main class="overflow-y-auto h-full px-5">
       <router-outlet></router-outlet>
     </main>
   </div>
