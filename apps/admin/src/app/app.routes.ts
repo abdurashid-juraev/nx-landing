@@ -7,9 +7,15 @@ export const appRoutes: Route[] = [
     loadComponent: () => import('@org/feature-auth').then((m) => m.FeatureAuth)
   },
   {
-    path: 'dashboard',
-    loadComponent: () => import('@org/feature-dashboard').then((m) => m.FeatureDashboard),
-    canActivate: [authGuard]
+    path: '',
+    loadComponent: () => import('@org/feature-layout').then((m) => m.FeatureLayout),
+    canActivate: [authGuard],
+    children: [
+      {
+        path: 'dashboard',
+        loadComponent: () => import('@org/feature-dashboard').then((m) => m.FeatureDashboard)
+      }
+    ]
   },
   {
     path: '',

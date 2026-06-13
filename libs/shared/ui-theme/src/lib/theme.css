@@ -10,3 +10,6 @@
 /* @theme {
   --font-sans: "Inter", sans-serif;
 } */
+button {
+  @apply cursor-pointer;
+}

@@ -1,6 +1,9 @@
-<div>
+<div class="flex bg-slate-200">
   <lib-sidebar />
-  <main>
+  <div class="px-5 py-2 w-full">
     <lib-topbar />
-  </main>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </div>
 </div>
