@@ -21,22 +21,22 @@ import { InputIconModule } from 'primeng/inputicon';
   styleUrl: './feature-auth.css'
 })
 export class FeatureAuth {
-  private readonly formBuildder = inject(FormBuilder);
+  private readonly formBuilder = inject(FormBuilder);
   private authService = inject(AuthService);
   private router = inject(Router);
 
   protected readonly isLoading = this.authService.isLoading;
   protected readonly errorMessage = this.authService.error;
-  protected readonly isAuthenicated = this.authService.isAuthenticated;
+  protected readonly isAuthenticated = this.authService.isAuthenticated;
 
-  protected readonly loginForm = this.formBuildder.nonNullable.group({
+  protected readonly loginForm = this.formBuilder.nonNullable.group({
     username: ['', [Validators.required]],
     password: ['', [Validators.required, Validators.minLength(6)]]
   });
 
   constructor() {
     effect(() => {
-      if (this.isAuthenicated()) {
+      if (this.isAuthenticated()) {
         this.router.navigate(['/dashboard']);
       }
     });
@@ -48,7 +48,7 @@ export class FeatureAuth {
       return;
     }
 
-    const creadentials = this.loginForm.getRawValue();
-    this.authService.login(creadentials);
+    const credentials = this.loginForm.getRawValue();
+    this.authService.login(credentials);
   }
 }
